@@ -22,5 +22,3 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run build
-      - name: start json-server
-        run: npm run server
