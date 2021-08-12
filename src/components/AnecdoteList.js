@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { voteAnecdote } from '../reducers/anecdoteReducer';
 import { showNotificationWithTimeout } from '../reducers/notificationReducer';
 
-const AnecdoteList = ({
+export const AnecdoteList = ({
   anecdotes,
   voteAnecdote,
   showNotificationWithTimeout
