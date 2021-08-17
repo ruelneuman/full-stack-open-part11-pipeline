@@ -29,7 +29,7 @@ jobs:
         with:
           command: npm run test:e2e
           start: npm run start-prod
-          wait-on: http://localhost:3000
+          wait-on: http://localhost:3001
       - name: Deploy to Heroku
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@79ef2ae4ff9b897010907016b268fd0f88561820
