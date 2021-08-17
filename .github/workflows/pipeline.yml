@@ -37,9 +37,8 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: full-stack-open-pipeline-92384
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          # healthCheck: 'https://full-stack-open-pipeline-92384.herokuapp.com/health'
-          # checkstring: 'ok'
-          # rollbackonhealthcheckfailed: true
+          healthCheck: 'https://full-stack-open-pipeline-92384.herokuapp.com/anecdotes'
+          rollbackonhealthcheckfailed: true
       - uses: actions/checkout@v2
       - name: Bump version and push tag
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip')}}
